@@ -56,7 +56,7 @@ HashMap * createMap(long capacity) {
   mapa-> buckets = malloc(sizeof(Pair) * capacity);
   mapa-> buckets = NULL;
   mapa->size = capacity;
-  mapa->current = 0;
+  mapa->current = -1;
   mapa->size = 0;
   return mapa;
 }
