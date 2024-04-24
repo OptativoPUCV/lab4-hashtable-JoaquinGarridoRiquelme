@@ -52,8 +52,11 @@ void enlarge(HashMap * map) {
 
 
 HashMap * createMap(long capacity) {
-
-    return NULL;
+  HashMap *mapa = (mapa*) malloc(sizeof(Pair) * capacity);
+  mapa->size = capacity;
+  mapa->current = NULL;
+  mapa->size = 0;
+  return mapa;
 }
 
 void eraseMap(HashMap * map,  char * key) {    
