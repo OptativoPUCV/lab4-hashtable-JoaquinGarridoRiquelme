@@ -72,7 +72,13 @@ HashMap * createMap(long capacity) {
 void eraseMap(HashMap * map,  char * key) 
 {
   long pos = hash(key, map -> capacity);
-  while(strcmp(key, map->buckets[pos]->key) != 0)
+  while(true)
+  {
+    if(map->buckets[pos] == NULL) return NULL;
+    if(strcmp(llave, map->buckets[pos]->key) == 0) break;
+    pos++;
+  }
+  strcpy(map->buckets[pos]->key, NULL)
   map->size--;
 }
 

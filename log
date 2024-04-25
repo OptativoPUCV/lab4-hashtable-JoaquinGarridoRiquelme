@@ -423,3 +423,38 @@ Thu 25 Apr 2024 03:46:56 AM UTC:
  tests:  8|3
 total_score: 40/70
 55175eb
+Thu 25 Apr 2024 03:49:38 AM UTC: 
+ hashmap.c | 8 +++++++-
+ 1 file changed, 7 insertions(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘eraseMap’:
+hashmap.c:77:42: error: ‘return’ with a value, in function returning void [-Werror=return-type]
+   77 |     if(map->buckets[pos] == NULL) return NULL;
+      |                                          ^~~~
+hashmap.c:72:6: note: declared here
+   72 | void eraseMap(HashMap * map,  char * key)
+      |      ^~~~~~~~
+hashmap.c:78:15: error: ‘llave’ undeclared (first use in this function)
+   78 |     if(strcmp(llave, map->buckets[pos]->key) == 0) break;
+      |               ^~~~~
+hashmap.c:78:15: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:81:3: error: argument 2 null where non-null expected [-Werror=nonnull]
+   81 |   strcpy(map->buckets[pos]->key, NULL)
+      |   ^~~~~~
+In file included from /nix/store/4pqv2mwdn88h7xvsm7a5zplrd8sxzvw0-glibc-2.35-163-dev/include/features.h:490,
+                 from /nix/store/4pqv2mwdn88h7xvsm7a5zplrd8sxzvw0-glibc-2.35-163-dev/include/bits/libc-header-start.h:33,
+                 from /nix/store/4pqv2mwdn88h7xvsm7a5zplrd8sxzvw0-glibc-2.35-163-dev/include/stdio.h:27,
+                 from test.c:1:
+/nix/store/4pqv2mwdn88h7xvsm7a5zplrd8sxzvw0-glibc-2.35-163-dev/include/bits/string_fortified.h:77:1: note: in a call to function ‘strcpy’ declared ‘nonnull’
+   77 | __NTH (strcpy (char *__restrict __dest, const char *__restrict __src))
+      | ^~~~~
+In file included from test.c:4:
+hashmap.c:81:39: error: expected ‘;’ before ‘map’
+   81 |   strcpy(map->buckets[pos]->key, NULL)
+      |                                       ^
+      |                                       ;
+   82 |   map->size--;
+      |   ~~~                                  
+cc1: all warnings being treated as errors
+Compilation failed
+3a24348
