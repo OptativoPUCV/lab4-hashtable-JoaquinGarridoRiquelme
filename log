@@ -508,3 +508,26 @@ In file included from /nix/store/4pqv2mwdn88h7xvsm7a5zplrd8sxzvw0-glibc-2.35-163
 cc1: all warnings being treated as errors
 Compilation failed
 37bb5be
+Thu 25 Apr 2024 03:50:28 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘eraseMap’:
+hashmap.c:74:19: error: ‘key’ undeclared (first use in this function); did you mean ‘key_t’?
+   74 |   long pos = hash(key, map -> capacity);
+      |                   ^~~
+      |                   key_t
+hashmap.c:74:19: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:81:3: error: argument 2 null where non-null expected [-Werror=nonnull]
+   81 |   strcpy(map->buckets[pos]->key, NULL);
+      |   ^~~~~~
+In file included from /nix/store/4pqv2mwdn88h7xvsm7a5zplrd8sxzvw0-glibc-2.35-163-dev/include/features.h:490,
+                 from /nix/store/4pqv2mwdn88h7xvsm7a5zplrd8sxzvw0-glibc-2.35-163-dev/include/bits/libc-header-start.h:33,
+                 from /nix/store/4pqv2mwdn88h7xvsm7a5zplrd8sxzvw0-glibc-2.35-163-dev/include/stdio.h:27,
+                 from test.c:1:
+/nix/store/4pqv2mwdn88h7xvsm7a5zplrd8sxzvw0-glibc-2.35-163-dev/include/bits/string_fortified.h:77:1: note: in a call to function ‘strcpy’ declared ‘nonnull’
+   77 | __NTH (strcpy (char *__restrict __dest, const char *__restrict __src))
+      | ^~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+3939383

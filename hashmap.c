@@ -69,7 +69,7 @@ HashMap * createMap(long capacity) {
   return mapa;
 }
 
-void eraseMap(HashMap * map,  char * key) 
+void eraseMap(HashMap * map,  char * llave) 
 {
   long pos = hash(key, map -> capacity);
   while(true)
