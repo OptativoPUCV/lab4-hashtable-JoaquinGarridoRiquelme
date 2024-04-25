@@ -78,6 +78,7 @@ Pair * searchMap(HashMap * map,  char * llave)
   long pos = hash(llave, map->capacity);
   while(strcmp(llave, map->buckets[pos]->key) != 0)
     pos = (pos + 1) % map->size;
+  map-> current = pos;
   return map->buckets[pos];
 }
 
