@@ -53,9 +53,23 @@ void insertMap(HashMap * map, char * key, void * value) {
   map->current = pos % map->capacity;
 }
 
-void enlarge(HashMap * map) {
-    enlarge_called = 1; //no borrar (testing purposes)
+void enlarge(HashMap * map) 
+{
+  Pair **viejo_arreglo = map;
+  int talla_vieja = map -> size;
 
+  map -> capacity *= 2;
+  Pair **nuevo_arreglo = (Pair **) calloc(map-> capacity, sizeof(Pair*));
+  map = nuevo_arreglo;
+  map->size = 0;
+
+  for(i = 0; talla_vieja != 0; i++)
+    {
+      if(viejo_arreglo[i] == NULL || viejo_arreglo[i] -> key == NULL) continue;
+      insertMap(map, viejo_arreglo[i]->key,viejo_arreglo[i]->value);
+      talla_vieja--;
+    }
+  free(viejo_arreglo);
 
 }
 
