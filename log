@@ -116,3 +116,9 @@ hashmap.c:55:28: error: expected ‘,’ or ‘;’ before ‘malloc’
       |                            ^~~~~~
 Compilation failed
 88f82a7
+Thu 25 Apr 2024 02:16:40 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  0|6
+total_score: 0/70
+69bf474
