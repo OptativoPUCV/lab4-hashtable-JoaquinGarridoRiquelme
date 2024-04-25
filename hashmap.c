@@ -73,10 +73,10 @@ void eraseMap(HashMap * map,  char * key) {
 
 }
 
-Pair * searchMap(HashMap * map,  char * key) 
+Pair * searchMap(HashMap * map,  char * llave) 
 {   
-  long pos = hash(key, map->capacity);
-  while(map-> buckets[pos] -> key != key)
+  long pos = hash(llave, map->capacity);
+  while(map-> buckets[pos] -> key != llave)
     pos = (pos + 1) % map->size;
   return map->buckets[pos];
 }
