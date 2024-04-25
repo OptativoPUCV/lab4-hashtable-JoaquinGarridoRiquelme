@@ -603,3 +603,9 @@ hashmap.c:104:7: note: ...this statement, but the latter is misleadingly indente
 cc1: all warnings being treated as errors
 Compilation failed
 cd2a0be
+Thu 25 Apr 2024 03:57:00 AM UTC: 
+ hashmap.c | 2 ++
+ 1 file changed, 2 insertions(+)
+ tests:  13|2
+total_score: 50/70
+34a7df6
