@@ -86,3 +86,18 @@ Thu 25 Apr 2024 02:13:35 AM UTC:
  tests:  0|6
 total_score: 0/70
 ff84520
+Thu 25 Apr 2024 02:15:29 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘createMap’:
+hashmap.c:55:20: error: ‘Hashmap’ undeclared (first use in this function); did you mean ‘HashMap’?
+   55 |   HashMap *mapa = (Hashmap*)malloc(sizeof(HashMap));
+      |                    ^~~~~~~
+      |                    HashMap
+hashmap.c:55:20: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:55:28: error: expected expression before ‘)’ token
+   55 |   HashMap *mapa = (Hashmap*)malloc(sizeof(HashMap));
+      |                            ^
+Compilation failed
+932c381
