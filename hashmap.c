@@ -71,7 +71,7 @@ HashMap * createMap(long capacity) {
 
 void eraseMap(HashMap * map,  char * llave) 
 {
-  long pos = hash(key, map -> capacity);
+  long pos = hash(llave, map -> capacity);
   while(true)
   {
     if(map->buckets[pos] == NULL) return ;
