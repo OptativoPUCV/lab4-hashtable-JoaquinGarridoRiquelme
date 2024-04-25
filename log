@@ -157,3 +157,14 @@ hashmap.c:47:25: error: incompatible types when assigning to type ‘Pair *’ f
 cc1: all warnings being treated as errors
 Compilation failed
 0e67604
+Thu 25 Apr 2024 02:31:19 AM UTC: 
+ hashmap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:44:63: error: comparison between pointer and integer [-Werror]
+   44 |   while(map->buckets[pos] != NULL && map->buckets[pos] -> key != -1)
+      |                                                               ^~
+cc1: all warnings being treated as errors
+Compilation failed
+8e73d7c

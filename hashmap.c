@@ -43,8 +43,8 @@ void insertMap(HashMap * map, char * key, void * value) {
   int pos = hash(key, map->capacity);
   while(map->buckets[pos] != NULL && map->buckets[pos] -> key != -1)
     pos++;
-  Pair dato = createPair(key, value);
-  map -> buckets[pos] = dato;
+  map-> buckets[pos] = createPair(key, value);
+
 }
 
 void enlarge(HashMap * map) {
