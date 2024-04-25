@@ -76,9 +76,10 @@ void eraseMap(HashMap * map,  char * key) {
 Pair * searchMap(HashMap * map,  char * llave) 
 {   
   long pos = hash(llave, map->capacity);
-  while(strcmp(llave, map->buckets[pos]->key) != 0 || map->buckets[pos] == NULL)
+  while(true)
   {
     if(map->buckets[pos] == NULL) return NULL;
+    if(strcmp(llave, map->buckets[pos]->key) == 0) break;
     pos = (pos + 1) % map->size;
   }
   map-> current = pos;
