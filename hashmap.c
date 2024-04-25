@@ -97,7 +97,7 @@ Pair * searchMap(HashMap * map,  char * llave)
 
 Pair * firstMap(HashMap * map) 
 {
-  for(size_t i = 0; i < map-> capacity; i++)
+  for(size_t i = 0; i <= map-> capacity; i++)
   {
     if(map->buckets[i] != NULL && map->buckets[i]-> key != NULL)
     {
