@@ -589,3 +589,17 @@ hashmap.c:104:7: note: ...this statement, but the latter is misleadingly indente
 cc1: all warnings being treated as errors
 Compilation failed
 2054edd
+Thu 25 Apr 2024 03:56:44 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘firstMap’:
+hashmap.c:102:5: error: this ‘if’ clause does not guard... [-Werror=misleading-indentation]
+  102 |     if(map->buckets[i] != NULL && map->buckets[i]-> key != NULL)
+      |     ^~
+hashmap.c:104:7: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  104 |       return map->buckets[i];
+      |       ^~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+cd2a0be
