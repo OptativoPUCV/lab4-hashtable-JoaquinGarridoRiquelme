@@ -283,3 +283,19 @@ Thu 25 Apr 2024 03:10:31 AM UTC:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 8579cb3
+Thu 25 Apr 2024 03:17:07 AM UTC: 
+ hashmap.c | 8 +++++---
+ 1 file changed, 5 insertions(+), 3 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:50:23: error: ‘pair’ undeclared (first use in this function); did you mean ‘Pair’?
+   50 |   map->buckets[pos] = pair;
+      |                       ^~~~
+      |                       Pair
+hashmap.c:50:23: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:43:9: error: unused variable ‘par’ [-Werror=unused-variable]
+   43 |   Pair *par = createPair(key, value);
+      |         ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+f56ab24
