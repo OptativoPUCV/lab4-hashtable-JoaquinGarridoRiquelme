@@ -55,7 +55,7 @@ void insertMap(HashMap * map, char * key, void * value) {
 
 void enlarge(HashMap * map) 
 {
-  Pair *viejo_arreglo = map;
+  Pair **viejo_arreglo = map->buckets;
   int talla_vieja = map -> size;
 
   map -> capacity *= 2;
