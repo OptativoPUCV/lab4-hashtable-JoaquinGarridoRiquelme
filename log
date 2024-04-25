@@ -348,3 +348,17 @@ Thu 25 Apr 2024 03:31:09 AM UTC:
  1 file changed, 1 insertion(+)
  tests:  0|0
 b1d03a3
+Thu 25 Apr 2024 03:33:22 AM UTC: 
+ hashmap.c | 1 +
+ 1 file changed, 1 insertion(+)
+In file included from test.c:4:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:79:3: error: this ‘while’ clause does not guard... [-Werror=misleading-indentation]
+   79 |   while(strcmp(llave, map->buckets[pos]->key) != 0)
+      |   ^~~~~
+hashmap.c:81:5: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘while’
+   81 |     pos = (pos + 1) % map->size;
+      |     ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+730fbe8
