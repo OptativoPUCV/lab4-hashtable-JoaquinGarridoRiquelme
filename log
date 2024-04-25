@@ -678,3 +678,14 @@ hashmap.c:66:7: note: each undeclared identifier is reported only once for each 
 cc1: all warnings being treated as errors
 Compilation failed
 b99a340
+Thu 25 Apr 2024 04:13:47 AM UTC: 
+ hashmap.c | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:65:7: error: ‘i’ undeclared (first use in this function)
+   65 |   for(i = 0; talla_vieja != 0; i++)
+      |       ^
+hashmap.c:65:7: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+e84df48

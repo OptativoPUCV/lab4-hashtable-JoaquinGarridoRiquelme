@@ -59,8 +59,7 @@ void enlarge(HashMap * map)
   int talla_vieja = map -> size;
 
   map -> capacity *= 2;
-  Pair **nuevo_arreglo = (Pair **) calloc(map-> capacity, sizeof(Pair*));
-  map = nuevo_arreglo;
+  map->buckets = (Pair **) calloc(map-> capacity, sizeof(Pair*));
   map->size = 0;
 
   for(i = 0; talla_vieja != 0; i++)
