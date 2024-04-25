@@ -572,3 +572,20 @@ Thu 25 Apr 2024 03:55:40 AM UTC:
  tests:  12|2
 total_score: 50/70
 028e7b7
+Thu 25 Apr 2024 03:56:17 AM UTC: 
+ hashmap.c | 1 +
+ 1 file changed, 1 insertion(+)
+In file included from test.c:4:
+hashmap.c: In function ‘firstMap’:
+hashmap.c:103:22: error: assignment to ‘long int’ from ‘Pair *’ makes integer from pointer without a cast [-Werror=int-conversion]
+  103 |       map -> current = map->buckets[i];
+      |                      ^
+hashmap.c:102:5: error: this ‘if’ clause does not guard... [-Werror=misleading-indentation]
+  102 |     if(map->buckets[i] != NULL && map->buckets[i]-> key != NULL)
+      |     ^~
+hashmap.c:104:7: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  104 |       return map->buckets[i];
+      |       ^~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+2054edd
