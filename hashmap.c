@@ -69,9 +69,11 @@ HashMap * createMap(long capacity) {
   return mapa;
 }
 
-void eraseMap(HashMap * map,  char * key) {    
-
-
+void eraseMap(HashMap * map,  char * key) 
+{
+  long pos = hash(key, map -> capacity);
+  while(strcmp(key, map->buckets[pos]->key) != 0)
+  map->size--;
 }
 
 Pair * searchMap(HashMap * map,  char * llave) 
