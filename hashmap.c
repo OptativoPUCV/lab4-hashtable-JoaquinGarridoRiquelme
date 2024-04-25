@@ -83,7 +83,7 @@ Pair * searchMap(HashMap * map,  char * llave)
   {
     if(map->buckets[pos] == NULL) return NULL;
     if(strcmp(llave, map->buckets[pos]->key) == 0) break;
-    pos = (pos + 1) % map->size;
+    pos++;
   }
   map-> current = pos;
   return map->buckets[pos];
